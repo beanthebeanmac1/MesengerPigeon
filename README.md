@@ -5,10 +5,3 @@ The comments made are made out of AI im too lazy to make the green comments near
 But I was the one who wrote the script
 
 # Enjoy !
-**⠀⠀⣀⠤⠤⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⡠⠋⠒⠀⠟⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀
-⠓⠐⠒⡖⠒⠂⠀⣇⣀⡀⠀⠀⠀⠀⠀⠀
-⠀⠀⢰⠃⠀⠀⠀⡇⠀⠈⢳⠀⠀⠀⠀⠀
-⠀⠀⠈⣇⠀⠀⠀⠈⠓⣄⣀⡧⡀⣀⡀⡀
-⠀⠀⠀⠀⠉⡗⠦⢶⠒⠒⠒⠉⠉⠁⠀⠀
-⠀⠀⠀⠀⠒⠃⠠⠼⠀⠀⠀⠀⠀⠀⠀⠀**
