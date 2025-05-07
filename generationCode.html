@@ -213,6 +213,13 @@
         .join-button:active {
             background-color: #4e5fa9;
         }
+
+        .error-message {
+            color: #ed4245;
+            margin-top: 10px;
+            display: none;
+            font-size: 14px;
+        }
     </style>
     <title>Messenger Pigeon</title>
 </head>
@@ -261,10 +268,11 @@
     <div class="content">
         <div class="code" id="code"></div>
         
-        <div class="search-container">
+        <div class="search-container" id="search-container">
             <div class="search-label">Enter another user's code to join their call:</div>
             <input type="text" id="search-code" class="search-input" placeholder="Enter 5-digit code" maxlength="5">
             <button class="join-button" onclick="joinCall()">Join Call</button>
+            <div class="error-message" id="error-message">Please enter a valid 5-digit code</div>
         </div>
     </div>
 
@@ -275,20 +283,28 @@
         }
 
         // Display the code in the page
-        document.getElementById('code').textContent = generateCode();
+        const myCode = generateCode();
+        document.getElementById('code').textContent = myCode;
         
         // Function to join a call with another user's code
         function joinCall() {
             const codeInput = document.getElementById('search-code').value;
+            const errorMessage = document.getElementById('error-message');
             
             // Check if input is a valid 5-digit code
             if (/^\d{5}$/.test(codeInput)) {
-                alert("Connecting to call with code: " + codeInput);
-                setTimeout(() => {
-                    alert("Connected successfully!");
-                }, 1000);
+                // Store the code in local storage or session storage so it can be accessed from the whenCalling.html page
+                localStorage.setItem('callingCode', codeInput);
+                localStorage.setItem('myCode', myCode);
+                
+                // Redirect to the whenCalling.html page
+                window.location.href = 'whenCalling.html';
             } else {
-                alert("Please enter a valid 5-digit code");
+                // Show error message
+                errorMessage.style.display = 'block';
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 3000);
             }
         }
         
